@@ -136,13 +136,12 @@
   }
   .cta-row{margin-top:38px; display:flex; gap:14px; flex-wrap:wrap; opacity:0; animation:rise .9s .6s ease forwards;}
   .btn{
-    display:inline-flex; align-items:center; gap:10px; padding:14px 26px; border-radius:12px;
+    display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 26px; border-radius:12px;
     font-size:15px; font-weight:600; text-decoration:none; transition:.25s; border:1px solid transparent;
   }
+  .btn svg{width:18px; height:18px; flex-shrink:0;}
   .btn-gold{background:var(--gold); color:#fff; box-shadow:0 8px 20px rgba(184,146,90,.28);}
   .btn-gold:hover{background:var(--gold-deep); transform:translateY(-2px);}
-  .btn-navy{background:var(--navy); color:#fff; box-shadow:0 8px 20px rgba(16,29,51,.22);}
-  .btn-navy:hover{background:var(--navy-soft); transform:translateY(-2px);}
   .btn-ghost{border-color:var(--line); color:var(--ink); background:rgba(255,255,255,.5);}
   .btn-ghost:hover{border-color:var(--gold); color:var(--gold-deep); transform:translateY(-2px);}
 
@@ -232,33 +231,29 @@
   .channel .go{margin-top:auto; font-size:13px; color:var(--gold-deep); font-weight:600;}
   .channel.whatsapp .go{color:#1c9c4c;}
 
-  /* ---------- app promo ---------- */
+  /* ---------- app promo (Clean & Balanced) ---------- */
   .promo{
-    border:1px solid var(--line); border-radius:22px; padding:52px 40px; text-align:center;
+    border:1px solid var(--line); border-radius:22px; padding:52px 32px; text-align:center;
     background:radial-gradient(ellipse at 50% 0%, rgba(184,146,90,.12), transparent 70%), #fff;
     box-shadow:0 10px 40px rgba(28,38,54,.05);
   }
   .promo h3{font-size:clamp(24px,3vw,32px); font-weight:800; margin-bottom:14px; color:var(--ink);}
-  .promo p{color:var(--ink-dim); max-width:52ch; margin:0 auto 30px;}
-  .stores{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;}
-  .store-badge{
-    display:inline-flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius:12px;
-    padding:12px 22px; color:var(--ink-dim); font-size:14px; opacity:.85; background:var(--cream-soft);
-    text-decoration:none; transition:.25s;
+  .promo p{color:var(--ink-dim); max-width:52ch; margin:0 auto 32px;}
+  .app-actions{
+    display:flex; gap:14px; justify-content:center; align-items:center; flex-wrap:wrap;
+    max-width:540px; margin:0 auto;
   }
-  .store-badge.active-store{
-    opacity:1; background:var(--navy); color:#fff; border-color:var(--navy);
-    font-weight:600; box-shadow:0 8px 22px rgba(16,29,51,.18);
+  .app-actions .btn{
+    flex:1 1 230px;
   }
-  .store-badge.active-store:hover{
-    background:var(--navy-soft); transform:translateY(-2px); box-shadow:0 12px 28px rgba(16,29,51,.26);
+  .store-note{
+    margin-top:20px; display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; color:var(--ink-dim); background:var(--cream-soft);
+    border:1px solid var(--line); padding:7px 16px; border-radius:999px;
   }
-  .store-badge .soon{font-size:11px; color:var(--gold-deep); letter-spacing:.06em; margin-inline-start:6px; font-weight:700;}
-  .store-badge .live-badge{
-    font-size:11px; background:rgba(37,211,102,.18); color:#4ade80; border:1px solid rgba(74,222,128,.35);
-    padding:2px 9px; border-radius:999px; margin-inline-start:6px; font-weight:700;
+  .store-note .soon{
+    color:var(--gold-deep); font-weight:700; font-size:12px;
   }
-  .apk-link{margin-top:20px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
 
   /* ---------- footer ---------- */
   footer{
@@ -294,33 +289,31 @@
   }
   .foot-bottom .madeline{color:var(--gold-soft); letter-spacing:.04em;}
 
-  /* ---------- Prominent Developer Portfolio Button ---------- */
+  /* ---------- Developer Portfolio Link ---------- */
   .dev-credit{
-    position:relative; text-align:center; padding:14px 20px 28px;
+    position:relative; text-align:center; padding:12px 20px 26px;
   }
   .dev-btn{
-    display:inline-flex; align-items:center; gap:10px;
-    padding:10px 22px; border-radius:999px;
-    background:rgba(184,146,90,.12);
-    border:1px solid rgba(228,205,154,.38);
-    color:var(--cream);
-    font-size:13.5px; font-weight:600; text-decoration:none;
-    letter-spacing:.02em; transition:.3s ease;
-    box-shadow:0 4px 18px rgba(0,0,0,.22);
+    display:inline-flex; align-items:center; gap:8px;
+    padding:8px 18px; border-radius:999px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(228,205,154,.25);
+    color:#9fb0c8;
+    font-size:12.5px; font-weight:500; text-decoration:none;
+    letter-spacing:.02em; transition:.25s ease;
   }
   .dev-btn .dev-name{
-    color:var(--gold-soft); font-weight:800;
+    color:var(--gold-soft); font-weight:700;
   }
   .dev-btn svg{
-    width:16px; height:16px; stroke:var(--gold-soft); transition:transform .3s ease;
+    width:14px; height:14px; stroke:var(--gold-soft);
   }
   .dev-btn:hover{
-    background:var(--gold); color:#fff; border-color:var(--gold);
-    transform:translateY(-2px);
-    box-shadow:0 8px 25px rgba(184,146,90,.38);
+    border-color:var(--gold-soft);
+    background:rgba(184,146,90,.12);
+    color:var(--cream);
+    transform:translateY(-1px);
   }
-  .dev-btn:hover .dev-name{color:#fff;}
-  .dev-btn:hover svg{stroke:#fff; transform:translateX(-3px);}
 
   @media (max-width:1000px){
     .grid3{grid-template-columns:repeat(2,1fr);}
@@ -333,6 +326,7 @@
   }
   @media (max-width:520px){
     .foot-grid{grid-template-columns:1fr;}
+    .promo{padding:40px 22px;}
   }
 
   html[dir="ltr"] .num, html[dir="ltr"] .foot-col a{text-align:start;}
@@ -474,21 +468,22 @@
     <div class="promo">
       <h3 data-tr="ptitle">منصّة مؤمن علي التعليمية</h3>
       <p data-tr="pdesc">محاضرات، مذكرات، اختبارات، ومتابعة لحظية بلحظة لمستواك في الفيزياء — كل ده في تطبيق واحد.</p>
-      <div class="stores">
-        <!-- App Store (متاح الآن) -->
-        <a class="store-badge active-store" href="https://apps.apple.com/us/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B3%D8%AA%D8%B1-%D9%85%D8%A4%D9%85%D9%86-%D8%B9%D9%84%D9%8A/id6802009370" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><path d="M16 3c.2 2-.8 3.6-2 4.6-1.2 1-2.9 1.8-4.6 1.6-.2-2 .8-3.7 2-4.6C12.6 3.5 14.3 2.9 16 3z"/><path d="M20 17.2c-.6 1.3-1.3 2.6-2.4 3.7-1 1-1.9 1-2.9.5-1-.5-1.9-.5-2.9 0-1 .5-1.7.4-2.7-.5C6.9 18.8 5.6 15.7 6 13c.4-2.5 2.2-4 4-4 1 0 1.9.5 2.5.5.6 0 1.8-.6 3-.5.5 0 2.1.2 3.1 1.6-2.7 1.6-2.3 5.1 1.4 6.6z"/></svg>
-          <span data-tr="astore">App Store</span><span class="live-badge" data-tr="available">متاح الآن</span>
+      
+      <div class="app-actions">
+        <a class="btn btn-gold" href="https://github.com/U-WWW/Mo-men_ali/releases/download/Apk/Mr-mo.men-platform.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-tr="apkbtn">تحميل مباشر (APK)</span>
         </a>
-        <!-- Google Play (قريباً) -->
-        <div class="store-badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#5c6b80"><path d="M3 3l11 9-11 9V3z"/><path d="M14 12l4-4 4 2-4 2-4-2z" opacity=".5"/></svg>
-          <span data-tr="gplay">Google Play</span><span class="soon" data-tr="soon">قريباً</span>
-        </div>
+        <a class="btn btn-ghost" href="https://apps.apple.com/us/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B3%D8%AA%D8%B1-%D9%85%D8%A4%D9%85%D9%86-%D8%B9%D9%84%D9%8A/id6802009370" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.2 2-.8 3.6-2 4.6-1.2 1-2.9 1.8-4.6 1.6-.2-2 .8-3.7 2-4.6C12.6 3.5 14.3 2.9 16 3z"/><path d="M20 17.2c-.6 1.3-1.3 2.6-2.4 3.7-1 1-1.9 1-2.9.5-1-.5-1.9-.5-2.9 0-1 .5-1.7.4-2.7-.5C6.9 18.8 5.6 15.7 6 13c.4-2.5 2.2-4 4-4 1 0 1.9.5 2.5.5.6 0 1.8-.6 3-.5.5 0 2.1.2 3.1 1.6-2.7 1.6-2.3 5.1 1.4 6.6z"/></svg>
+          <span data-tr="iosbtn">App Store (آيفون)</span>
+        </a>
       </div>
-      <div class="apk-link">
-        <a class="btn btn-gold" href="https://github.com/U-WWW/Mo-men_ali/releases/download/Apk/Mr-mo.men-platform.apk" data-tr="apkbtn">تحميل مباشر للأندرويد (APK)</a>
-        <a class="btn btn-navy" href="https://apps.apple.com/us/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B3%D8%AA%D8%B1-%D9%85%D8%A4%D9%85%D9%86-%D8%B9%D9%84%D9%8A/id6802009370" target="_blank" rel="noopener" data-tr="iosbtn">تحميل للآيفون (App Store)</a>
+
+      <div class="store-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#5c6b80"><path d="M3 3l11 9-11 9V3z"/><path d="M14 12l4-4 4 2-4 2-4-2z" opacity=".5"/></svg>
+        <span data-tr="gplay">Google Play</span>
+        <span class="soon" data-tr="soon">قريباً</span>
       </div>
     </div>
   </div>
@@ -537,7 +532,6 @@
     <span class="madeline" data-tr="madeline">Physics · Precision · Excellence</span>
   </div>
   
-  <!-- زر البورتفليو الواضح -->
   <div class="dev-credit">
     <a class="dev-btn" href="https://swe-abdulrahman.vercel.app/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -564,8 +558,8 @@ const dict = {
     allg:"كل الصفوف", allgsub:"حمّل تطبيق المنصة", join:"انضم للقناة ←", download:"تحميل التطبيق ←",
     fbgroup:"جروب أسئلة الأونلاين", fbgroupsub:"جروب فيسبوك الرسمي", joingroup:"انضم للجروب ←",
     ptitle:"منصّة مؤمن علي التعليمية", pdesc:"محاضرات، مذكرات، اختبارات، ومتابعة لحظية بلحظة لمستواك في الفيزياء — كل ده في تطبيق واحد.",
-    gplay:"Google Play", astore:"App Store", soon:"قريباً", available:"متاح الآن",
-    apkbtn:"تحميل مباشر للأندرويد (APK)", iosbtn:"تحميل للآيفون (App Store)",
+    gplay:"Google Play", soon:"قريباً",
+    apkbtn:"تحميل مباشر (APK)", iosbtn:"App Store (آيفون)",
     fnick:"القيصر", fdesc:"أستاذ الفيزياء لأوائل الجمهورية. تعليم واضح، ونتيجة تتكلم عن نفسها.",
     fc1:"تواصل", fc2:"روابط سريعة", fc3:"القنوات", fl1:"التواصل", fl2:"قنوات الواتساب", fl3:"تحميل التطبيق",
     rights:"© 2026 مؤمن علي — القيصر. جميع الحقوق محفوظة.", madeline:"فيزياء · دقة · تميّز",
@@ -584,8 +578,8 @@ const dict = {
     allg:"All grades", allgsub:"Get the platform app", join:"Join channel ←", download:"Download app ←",
     fbgroup:"Online Q&A Group", fbgroupsub:"Official Facebook group", joingroup:"Join the group ←",
     ptitle:"Mo'men Ali Learning Platform", pdesc:"Lectures, notes, tests, and real-time tracking of your physics progress — all in one app.",
-    gplay:"Google Play", astore:"App Store", soon:"Coming soon", available:"Available Now",
-    apkbtn:"Direct Android Download (APK)", iosbtn:"Download on App Store (iOS)",
+    gplay:"Google Play", soon:"Coming soon",
+    apkbtn:"Direct Download (APK)", iosbtn:"App Store (iOS)",
     fnick:"The Caesar", fdesc:"Top-of-Republic physics teacher. Clear teaching, results that speak for themselves.",
     fc1:"Contact", fc2:"Quick links", fc3:"Channels", fl1:"Contact", fl2:"WhatsApp channels", fl3:"Download app",
     rights:"© 2026 Mo'men Ali — The Caesar. All rights reserved.", madeline:"Physics · Precision · Excellence",
